@@ -1,12 +1,12 @@
-# Digital Memcomputing Machine (DMM) based SAT solver implementation
+# Digital Memcomputing Machine (DMM) based SAT-Solver
 
 In the 'Science' article "Memcomputing NP-complete problems in polynomial time using polynomial resources and collective states" (https://www.science.org/doi/10.1126/sciadv.1500031), Memcomputing is introduced as a novel non-Turing paradigm of computation that uses interacting memory cells (memprocessors for short) to store and process information on the same physical platform. It is claimed that it was recently proven mathematically that memcomputing machines have the same computational power of nondeterministic Turing machines. Therefore, they should solve NP-complete problems in polynomial time and, using the appropriate architecture, with resources that only grow polynomially with the input size.
 
-This repository is a research driven implementation of the Digital Memcomputing Machine (DMM) described in this paper with the goal to verify if the results of the paper can be reproduced as well as to investigate if the performance extends to other SAT problem classes as well. Based on the boost library, it supports multiple ODE integration schemes and has a few parameter tuning options. Please note that the implementation is research driven, we are happy to receive feedback / improvements at any time. 
+This repository is a research implementation of the Digital Memcomputing Machine (DMM) described in this paper with the goal to verify if the results of the paper can be reproduced as well as to investigate if the performance extends to other SAT problem classes as well. Based on the boost library, it supports multiple ODE integration schemes and has a few parameter tuning options. Please note that the implementation is research driven, so we are happy to receive feedback / improvements at any time. 
 
 ## Requirements
 
-We have tested the implementation on Ubuntu Linux and MacOS Monterey and expect to work on any modern Linux or Mac based platform. To compile, a properly installation of the boost library is required (on MacOS, use `brew install boost`). For installing boost on your system, we refer to the libraries' website: https://www.boost.org/
+We have tested the implementation on Ubuntu Linux and MacOS Monterey and expect to work on any modern Linux or Mac based platform. To compile, a properly installation of the boost library is required (on MacOS, use `brew install boost`). For installing boost on your Linux based system, we refer to the libraries' website: https://www.boost.org/
 
 ## Compilation
 
