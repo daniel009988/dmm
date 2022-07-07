@@ -12,8 +12,8 @@ We have tested the implementation on Ubuntu Linux and MacOS Monterey and expect 
 
 The entire DMM based SAT solver is implemnted in one file, no Makefile required. We typically compile the file dmm.cc:
 
-`g++ dmm.cc -o dmm -std=c++17 -Ofast -lpthread -fpermissive` (Linux)
-`g++ dmm.cc -o dmm -std=c++14 -Ofast -I /opt/homebrew/cellar/boost/1.78.0/include -L /opt/homebrew/cellar/boost/1.78.0/lib` (MacOS)
+```g++ dmm.cc -o dmm -std=c++17 -Ofast -lpthread -fpermissive``` (Linux)
+```g++ dmm.cc -o dmm -std=c++14 -Ofast -I /opt/homebrew/cellar/boost/1.78.0/include -L /opt/homebrew/cellar/boost/1.78.0/lib``` (MacOS)
 
 
 After compilation, the file "dmm" is being produced in the directory.
@@ -22,7 +22,7 @@ After compilation, the file "dmm" is being produced in the directory.
 
 The repository contains a few test instances. You can run the DMM based solver with default parameters:
 
-`./dmm -i transformed_barthel_n_100_r_4.300_p0_0.080_instance_001.cnf`
+```./dmm -i transformed_barthel_n_100_r_4.300_p0_0.080_instance_001.cnf```
 
 This will load the CNF file and run 8 instances of a DMM to solve it. When a solution is found (the system evolved to an energy level of zero unsat clauses), the variable assignments are being printed and also stored in a .solution.txt file of the instance.
 
@@ -30,24 +30,24 @@ This will load the CNF file and run 8 instances of a DMM to solve it. When a sol
 
 The following command shows all available command line options:
 
-`./dmm -h`
+```./dmm -h```
 
 When there's more time, we might compile more detailed information about the available command line features, but most of them should be self-explanatory. The source code is another point to look for further details about the parameters. Some of the most noteable parameters are:
 
-`./dmm -i <CNF-FILE> -o 1` uses the forward Euler integration scheme to solve the ODE
-`./dmm -i <CNF-FILE> -o 3` uses the Adaptive Runge Kutta Cash Karp 5.4 integration scheme to solve the ODE
-`./dmm -i <CNF-FILE> -o 4` uses the implicit Bulirsch Stoer integration scheme to solve the ODE
+```./dmm -i <CNF-FILE> -o 1``` uses the forward Euler integration scheme to solve the ODE
+```./dmm -i <CNF-FILE> -o 3``` uses the Adaptive Runge Kutta Cash Karp 5.4 integration scheme to solve the ODE
+```./dmm -i <CNF-FILE> -o 4``` uses the implicit Bulirsch Stoer integration scheme to solve the ODE
 
-`./dmm -i <CNF-FILE> -w 1` uses one thread for the integration
+```./dmm -i <CNF-FILE> -w 1``` uses one thread for the integration
 
-`./dmm -i <CNF-FILE> -t 1 -u 5` starts a parameter tuning run to find ideal parameters for the ODE as well as for the integration scheme
+```./dmm -i <CNF-FILE> -t 1 -u 5``` starts a parameter tuning run to find ideal parameters for the ODE as well as for the integration scheme
 
 
 ## Source code settings
 
 The maximum number of literals in a singe clause is specified in the code with:
 
-`#define         MAX_LITS_SYSTEM 10`
+```#define         MAX_LITS_SYSTEM 10```
 
 Update this number to the requirements of the CNF formulation you like to solve. Please note that the higher this value is, the more memory is being allocated.
 
