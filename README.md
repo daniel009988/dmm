@@ -4,7 +4,7 @@ In "Memcomputing NP-complete problems in polynomial time using polynomial resour
 
 ![Figure 2](https://github.com/daniel009988/dmm/blob/main/doc/paper.jpeg?raw=true)
 
-This repository is a research implementation of the Digital Memcomputing Machine (DMM) described in the paper with the goal to verify if the results of the paper can be reproduced as well as to investigate if the performance extends to other SAT problem classes as well. Based on the boost library, it supports multiple ODE integration schemes and has a few parameter tuning options. Please note that the implementation is research driven, so we are happy to receive feedback / improvements at any time. 
+This repository is a research implementation of the Digital Memcomputing Machine (DMM) described in the paper with the goal to verify if the results of the paper can be reproduced as well as to investigate if the performance extends to other SAT problem classes. Based on the boost library, it supports multiple ODE integration schemes and has a few parameter tuning options. Please note that the implementation is research driven, so we are happy to receive feedback / improvements at any time. 
 
 ## Requirements
 
