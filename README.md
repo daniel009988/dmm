@@ -13,6 +13,7 @@ We have tested the implementation on Ubuntu Linux and MacOS Monterey and expect 
 The entire DMM based SAT solver is implemnted in one file, no Makefile required. We typically compile the file dmm.cc:
 
 ```g++ dmm.cc -o dmm -std=c++17 -Ofast -lpthread -fpermissive``` (Linux)
+
 ```g++ dmm.cc -o dmm -std=c++14 -Ofast -I /opt/homebrew/cellar/boost/1.78.0/include -L /opt/homebrew/cellar/boost/1.78.0/lib``` (MacOS)
 
 
@@ -35,7 +36,9 @@ The following command shows all available command line options:
 When there's more time, we might compile more detailed information about the available command line features, but most of them should be self-explanatory. The source code is another point to look for further details about the parameters. Some of the most noteable parameters are:
 
 ```./dmm -i <CNF-FILE> -o 1``` uses the forward Euler integration scheme to solve the ODE
+
 ```./dmm -i <CNF-FILE> -o 3``` uses the Adaptive Runge Kutta Cash Karp 5.4 integration scheme to solve the ODE
+
 ```./dmm -i <CNF-FILE> -o 4``` uses the implicit Bulirsch Stoer integration scheme to solve the ODE
 
 ```./dmm -i <CNF-FILE> -w 1``` uses one thread for the integration
